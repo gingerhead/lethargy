@@ -52,7 +52,7 @@
         this.lastUpDeltas.push(lastDelta);
         this.lastUpDeltas.shift();
         return this.isInertia(1);
-      } else {
+      } else if (lastDelta < 0) {
         this.lastDownDeltas.push(lastDelta);
         this.lastDownDeltas.shift();
         return this.isInertia(-1);
